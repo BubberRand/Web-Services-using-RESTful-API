@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app>
+
+	<context-param>
+		<description>the database endpoint URL (inlcuding port); change "your-database-name" to your actual database name</description>
+		<param-name>dbhost</param-name>
+		<param-value>databaseurl.com</param-value>
+	</context-param>
+
+	<context-param>
+		<description>the database endpoint username</description>
+		<param-name>dbusername</param-name>
+		<param-value>username</param-value>
+	</context-param>
+
+	<context-param>
+		<description>the database endpoint password</description>
+		<param-name>dbpassword</param-name>
+		<param-value>password</param-value>
+	</context-param>	
+
+	<servlet-mapping>
+		<url-pattern>/api/*</url-pattern>
+		<servlet-name>FridgeAPI</servlet-name>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>FridgeAPI</servlet-name>
+		<servlet-class>FridgeRouterServlet</servlet-class>
+	</servlet>
+
+</web-app>
